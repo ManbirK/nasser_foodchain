@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animal Food Chain Website</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .card-hidden {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+
+    .card-open {
+      max-height: 1000px;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-gradient-to-b from-sky-100 via-green-100 to-emerald-200 text-gray-800 p-6">
+
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Header -->
+    <header class="text-center mb-14">
+      <h1 class="text-6xl font-extrabold mb-6">
+        🌎 Animal Food Chain Website
+      </h1>
+
+      <p class="text-xl max-w-4xl mx-auto leading-relaxed">
+        A food chain explains how energy moves through nature. Animals need
+        food to survive, and every living thing depends on another part of
+        the ecosystem.
+      </p>
+    </header>
+
+    <!-- Food Chain -->
+    <section class="bg-white rounded-[40px] shadow-2xl p-8 mb-12">
+      <h2 class="text-4xl font-bold text-center mb-10">
+        🌱 How The Food Chain Works
+      </h2>
+
+      <div class="flex flex-wrap items-center justify-center gap-5">
+
+        <!-- Sun -->
+        <div class="flex items-center gap-4">
+          <div class="bg-yellow-200 rounded-3xl shadow-lg p-6 w-56 h-72 flex flex-col justify-center items-center text-center hover:scale-105 transition-transform">
+            <div class="text-7xl mb-4">☀️</div>
+            <h3 class="text-2xl font-bold mb-3">Sun</h3>
+            <p class="text-sm leading-relaxed">
+              The Sun provides energy for every living thing on Earth.
+            </p>
+          </div>
+
+          <div class="text-5xl">➡️</div>
+        </div>
+
+        <!-- Plants -->
+        <div class="flex items-center gap-4">
+          <div class="bg-green-200 rounded-3xl shadow-lg p-6 w-56 h-72 flex flex-col justify-center items-center text-center hover:scale-105 transition-transform">
+            <div class="text-7xl mb-4">🌿</div>
+            <h3 class="text-2xl font-bold mb-3">Plants</h3>
+            <p class="text-sm leading-relaxed">
+              Plants use sunlight to make food through photosynthesis.
+            </p>
+          </div>
+
+          <div class="text-5xl">➡️</div>
+        </div>
+
+        <!-- Grasshopper -->
+        <div class="flex items-center gap-4">
+          <div class="bg-lime-200 rounded-3xl shadow-lg p-6 w-56 h-72 flex flex-col justify-center items-center text-center hover:scale-105 transition-transform">
+            <div class="text-7xl mb-4">🦗</div>
+            <h3 class="text-2xl font-bold mb-3">Grasshopper</h3>
+            <p class="text-sm leading-relaxed">
+              Grasshoppers eat plants and become food for other animals.
+            </p>
+          </div>
+
+          <div class="text-5xl">➡️</div>
+        </div>
+
+        <!-- Frog -->
+        <div class="flex items-center gap-4">
+          <div class="bg-emerald-200 rounded-3xl shadow-lg p-6 w-56 h-72 flex flex-col justify-center items-center text-center hover:scale-105 transition-transform">
+            <div class="text-7xl mb-4">🐸</div>
+            <h3 class="text-2xl font-bold mb-3">Frog</h3>
+            <p class="text-sm leading-relaxed">
+              Frogs eat insects like grasshoppers to survive.
+            </p>
+          </div>
+
+          <div class="text-5xl">➡️</div>
+        </div>
+
+        <!-- Snake -->
+        <div class="flex items-center gap-4">
+          <div class="bg-green-300 rounded-3xl shadow-lg p-6 w-56 h-72 flex flex-col justify-center items-center text-center hover:scale-105 transition-transform">
+            <div class="text-7xl mb-4">🐍</div>
+            <h3 class="text-2xl font-bold mb-3">Snake</h3>
+            <p class="text-sm leading-relaxed">
+              Snakes are hunters that eat frogs and rodents.
+            </p>
+          </div>
+
+          <div class="text-5xl">➡️</div>
+        </div>
+
+        <!-- Eagle -->
+        <div class="bg-orange-200 rounded-3xl shadow-lg p-6 w-56 h-72 flex flex-col justify-center items-center text-center hover:scale-105 transition-transform">
+          <div class="text-7xl mb-4">🦅</div>
+          <h3 class="text-2xl font-bold mb-3">Eagle</h3>
+          <p class="text-sm leading-relaxed">
+            Eagles are powerful predators near the top of the food chain.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Info Cards -->
+    <section class="grid lg:grid-cols-3 gap-8 mb-12">
+
+      <div class="bg-white rounded-3xl shadow-xl p-7">
+        <h2 class="text-3xl font-bold mb-4">☀️ Energy Source</h2>
+        <p class="text-lg leading-relaxed">
+          Almost all food chains begin with the Sun. Plants capture
+          sunlight and turn it into energy.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-xl p-7">
+        <h2 class="text-3xl font-bold mb-4">🌿 Producers</h2>
+        <p class="text-lg leading-relaxed">
+          Producers are living things like plants and algae that make their
+          own food.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-xl p-7">
+        <h2 class="text-3xl font-bold mb-4">🦁 Consumers</h2>
+        <p class="text-lg leading-relaxed">
+          Consumers are animals that eat plants or other animals.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Forest Animals -->
+    <section class="bg-white rounded-[40px] shadow-2xl p-8 mb-12">
+
+      <h2 class="text-4xl font-bold text-center mb-8">
+        🌲 Forest Ecosystem Animals
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Rabbit -->
+        <div onclick="toggleCard('rabbit')" class="bg-green-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl hover:scale-105 transition-all cursor-pointer">
+          <h3 class="text-3xl font-bold mb-3">Rabbit</h3>
+          <p class="font-semibold text-green-700 mb-3">
+            Primary Consumer
+          </p>
+
+          <p class="text-lg">
+            Rabbits eat grass and plants.
+          </p>
+
+          <div id="rabbit" class="card-hidden">
+            <div class="border-t border-green-200 pt-4 mt-4">
+
+              <h4 class="text-2xl font-bold mb-3">
+                📖 Animal History
+              </h4>
+
+              <p class="text-lg leading-relaxed mb-4">
+                Rabbits have existed for millions of years and became known for
+                their speed and ability to survive in many environments.
+              </p>
+
+              <h4 class="text-2xl font-bold mb-3">
+                🧠 What They Do
+              </h4>
+
+              <p class="text-lg leading-relaxed mb-4">
+                Rabbits spend most of their time searching for plants and staying
+                alert for predators.
+              </p>
+
+              <h4 class="text-2xl font-bold mb-3">
+                ⭐ What Makes Them Unique
+              </h4>
+
+              <p class="text-lg leading-relaxed">
+                Their strong back legs help them jump quickly away from danger.
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Fox -->
+        <div onclick="toggleCard('fox')" class="bg-green-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl hover:scale-105 transition-all cursor-pointer">
+          <h3 class="text-3xl font-bold mb-3">Fox</h3>
+          <p class="font-semibold text-green-700 mb-3">
+            Secondary Consumer
+          </p>
+
+          <p class="text-lg">
+            Foxes hunt rabbits and small animals.
+          </p>
+
+          <div id="fox" class="card-hidden">
+            <div class="border-t border-green-200 pt-4 mt-4">
+
+              <h4 class="text-2xl font-bold mb-3">
+                📖 Animal History
+              </h4>
+
+              <p class="text-lg leading-relaxed mb-4">
+                Foxes adapted to forests, grasslands, snowy regions,
+                and even cities around the world.
+              </p>
+
+              <h4 class="text-2xl font-bold mb-3">
+                🧠 What They Do
+              </h4>
+
+              <p class="text-lg leading-relaxed mb-4">
+                Foxes are clever hunters that quietly stalk prey at night.
+              </p>
+
+              <h4 class="text-2xl font-bold mb-3">
+                ⭐ What Makes Them Unique
+              </h4>
+
+              <p class="text-lg leading-relaxed">
+                Their intelligence and hearing make them excellent hunters.
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Wolf -->
+        <div onclick="toggleCard('wolf')" class="bg-green-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl hover:scale-105 transition-all cursor-pointer">
+          <h3 class="text-3xl font-bold mb-3">Wolf</h3>
+          <p class="font-semibold text-green-700 mb-3">
+            Top Predator
+          </p>
+
+          <p class="text-lg">
+            Wolves are important hunters in forests.
+          </p>
+
+          <div id="wolf" class="card-hidden">
+            <div class="border-t border-green-200 pt-4 mt-4">
+
+              <h4 class="text-2xl font-bold mb-3">
+                📖 Animal History
+              </h4>
+
+              <p class="text-lg leading-relaxed mb-4">
+                Wolves once lived across huge parts of the world and inspired
+                many ancient legends.
+              </p>
+
+              <h4 class="text-2xl font-bold mb-3">
+                🧠 What They Do
+              </h4>
+
+              <p class="text-lg leading-relaxed mb-4">
+                Wolves work together in packs and communicate through howls.
+              </p>
+
+              <h4 class="text-2xl font-bold mb-3">
+                ⭐ What Makes Them Unique
+              </h4>
+
+              <p class="text-lg leading-relaxed">
+                Their teamwork makes them one of nature’s greatest hunters.
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Endangered Animals -->
+    <section class="bg-gradient-to-br from-red-100 via-orange-100 to-yellow-100 rounded-[40px] shadow-2xl p-8 mb-12">
+
+      <h2 class="text-5xl font-extrabold text-center mb-8">
+        🛟 Rare Animals That Need Protection
+      </h2>
+
+      <div class="grid lg:grid-cols-3 gap-7">
+
+        <!-- Vaquita -->
+        <div class="bg-white rounded-[35px] p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all border-2 border-orange-100">
+          <h3 class="text-3xl font-bold mb-3">
+            Vaquita 🐬
+          </h3>
+
+          <div class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-lg font-bold mb-4">
+            Critically Endangered
+          </div>
+
+          <p class="text-lg leading-relaxed mb-4">
+            The vaquita is the rarest marine mammal in the world and only lives near Mexico.
+          </p>
+
+          <h4 class="text-2xl font-bold mb-3">
+            ⚠️ Biggest Danger
+          </h4>
+
+          <p class="text-lg leading-relaxed mb-4">
+            Fishing nets are the biggest threat to its survival.
+          </p>
+
+          <h4 class="text-2xl font-bold mb-3">
+            🌍 How Humans Can Help
+          </h4>
+
+          <p class="text-lg leading-relaxed mb-4">
+            Scientists remove dangerous fishing nets and create safer ocean zones.
+          </p>
+        </div>
+
+        <!-- Leopard -->
+        <div class="bg-white rounded-[35px] p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all border-2 border-orange-100">
+          <h3 class="text-3xl font-bold mb-3">
+            Amur Leopard 🐆
+          </h3>
+
+          <div class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-lg font-bold mb-4">
+            Critically Endangered
+          </div>
+
+          <p class="text-lg leading-relaxed mb-4">
+            This rare leopard survives in cold forests and has beautiful thick fur.
+          </p>
+
+          <h4 class="text-2xl font-bold mb-3">
+            ⚠️ Biggest Danger
+          </h4>
+
+          <p class="text-lg leading-relaxed mb-4">
+            Habitat destruction and illegal hunting made their population very small.
+          </p>
+
+          <h4 class="text-2xl font-bold mb-3">
+            🌍 How Humans Can Help
+          </h4>
+
+          <p class="text-lg leading-relaxed mb-4">
+            Protected forests and breeding programs are helping them recover.
+          </p>
+        </div>
+
+        <!-- Red Panda -->
+        <div class="bg-white rounded-[35px] p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all border-2 border-orange-100">
+          <h3 class="text-3xl font-bold mb-3">
+            Red Panda 🐼
+          </h3>
+
+          <div class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-lg font-bold mb-4">
+            Endangered
+          </div>
+
+          <p class="text-lg leading-relaxed mb-4">
+            Red pandas spend much of their lives in trees and use fluffy tails for warmth.
+          </p>
+
+          <h4 class="text-2xl font-bold mb-3">
+            ⚠️ Biggest Danger
+          </h4>
+
+          <p class="text-lg leading-relaxed mb-4">
+            Forest destruction reduces the bamboo forests they depend on.
+          </p>
+
+          <h4 class="text-2xl font-bold mb-3">
+            🌍 How Humans Can Help
+          </h4>
+
+          <p class="text-lg leading-relaxed mb-4">
+            Organizations plant trees and protect bamboo forests.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-700 pb-8">
+      <p class="font-bold text-lg">
+        Made for students and animal lovers 🐾
+      </p>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleCard(id) {
+      const card = document.getElementById(id);
+
+      if (card.classList.contains("card-open")) {
+        card.classList.remove("card-open");
+        card.classList.add("card-hidden");
+      } else {
+        card.classList.remove("card-hidden");
+        card.classList.add("card-open");
+      }
+    }
+  </script>
+
+</body>
+</html>
