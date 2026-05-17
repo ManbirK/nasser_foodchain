@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animal Food Chain Explorer</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+
+    .animal-info {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    .animal-card:hover .animal-info {
+      max-height: 2000px;
+      opacity: 1;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-sky-100 via-green-100 to-emerald-200 text-gray-800">
+
+  <div class="max-w-7xl mx-auto p-6 relative">
+
+    <div class="absolute top-40 left-0 w-32 h-32 bg-yellow-200 rounded-full blur-3xl opacity-40"></div>
+    <div class="absolute top-[1200px] right-0 w-40 h-40 bg-cyan-200 rounded-full blur-3xl opacity-40"></div>
+
+    <!-- HERO -->
+    <header class="text-center mb-16">
+      <h1 class="text-6xl font-extrabold mb-6">
+        🌎 Animal Food Chain Explorer
+      </h1>
+
+      <p class="text-xl max-w-4xl mx-auto leading-relaxed">
+        Explore amazing ecosystems, food chains, endangered animals,
+        and the incredible ways creatures survive in nature.
+      </p>
+    </header>
+
+    <!-- FOOD CHAIN -->
+    <section class="bg-white rounded-[40px] shadow-2xl p-10 mb-16 rotate-[-1deg]">
+
+      <h2 class="text-5xl font-bold text-center mb-10">
+        🌱 How The Food Chain Works
+      </h2>
+
+      <div class="flex flex-wrap justify-center items-center gap-5">
+
+        <div class="bg-yellow-200 rounded-3xl p-8 w-56 text-center shadow-xl">
+          <div class="text-7xl mb-4">☀️</div>
+          <h3 class="text-3xl font-bold mb-3">Sun</h3>
+          <p>The Sun provides energy for all life.</p>
+        </div>
+
+        <div class="text-5xl">➡️</div>
+
+        <div class="bg-green-200 rounded-3xl p-8 w-56 text-center shadow-xl">
+          <div class="text-7xl mb-4">🌿</div>
+          <h3 class="text-3xl font-bold mb-3">Plants</h3>
+          <p>Plants create food using sunlight.</p>
+        </div>
+
+        <div class="text-5xl">➡️</div>
+
+        <div class="bg-lime-200 rounded-3xl p-8 w-56 text-center shadow-xl">
+          <div class="text-7xl mb-4">🦗</div>
+          <h3 class="text-3xl font-bold mb-3">Grasshopper</h3>
+          <p>Grasshoppers eat plants.</p>
+        </div>
+
+        <div class="text-5xl">➡️</div>
+
+        <div class="bg-emerald-200 rounded-3xl p-8 w-56 text-center shadow-xl">
+          <div class="text-7xl mb-4">🐸</div>
+          <h3 class="text-3xl font-bold mb-3">Frog</h3>
+          <p>Frogs eat insects and small animals.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- UNIQUE EATERS -->
+    <section class="bg-white rounded-[40px] shadow-2xl p-10 mb-16">
+
+      <h2 class="text-5xl font-bold text-center mb-8">
+        🦴 Animals With Unique Eating Styles
+      </h2>
+
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+
+        <!-- Chameleon -->
+        <div class="animal-card bg-gradient-to-br from-yellow-100 to-orange-100 rounded-[35px] p-8 shadow-xl cursor-pointer">
+
+          <h3 class="text-4xl font-bold mb-4">
+            Chameleon 🦎
+          </h3>
+
+          <p class="text-xl font-semibold mb-3 text-orange-700">
+            Favorite Food: Insects
+          </p>
+
+          <p class="text-lg leading-relaxed">
+            Chameleons use long sticky tongues to catch insects.
+          </p>
+
+          <div class="animal-info border-t border-orange-200 pt-5">
+
+            <h4 class="text-2xl font-bold mb-3">
+              📖 About This Animal
+            </h4>
+
+            <p class="text-lg leading-relaxed mb-4">
+              Chameleons evolved special eyes that can move independently,
+              helping them spot prey and danger at the same time.
+            </p>
+
+            <p class="text-lg leading-relaxed">
+              Their camouflage abilities also help them survive in forests
+              and jungles around the world.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Archerfish -->
+        <div class="animal-card bg-gradient-to-br from-cyan-100 to-blue-100 rounded-[35px] p-8 shadow-xl cursor-pointer">
+
+          <h3 class="text-4xl font-bold mb-4">
+            Archerfish 🎯🐟
+          </h3>
+
+          <p class="text-xl font-semibold mb-3 text-blue-700">
+            Favorite Food: Insects
+          </p>
+
+          <p class="text-lg leading-relaxed">
+            Archerfish spit water at insects above the water.
+          </p>
+
+          <div class="animal-info border-t border-cyan-200 pt-5">
+
+            <h4 class="text-2xl font-bold mb-3">
+              💧 Unique Ability
+            </h4>
+
+            <p class="text-lg leading-relaxed">
+              Archerfish can accurately shoot streams of water to knock insects
+              into rivers and lakes before eating them.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ENDANGERED ANIMALS -->
+    <section class="bg-gradient-to-br from-red-100 via-orange-100 to-yellow-100 rounded-[40px] shadow-2xl p-10 mb-16">
+
+      <h2 class="text-5xl font-extrabold text-center mb-8">
+        🛟 Rare Animals That Need Protection
+      </h2>
+
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+
+        <!-- Vaquita -->
+        <div class="animal-card bg-white rounded-[35px] p-8 min-h-[950px] shadow-xl border-2 border-orange-100 cursor-pointer">
+
+          <h3 class="text-4xl font-bold mb-4">
+            Vaquita 🐬
+          </h3>
+
+          <div class="inline-block bg-red-100 text-red-700 px-5 py-2 rounded-full text-lg font-bold mb-5">
+            Critically Endangered
+          </div>
+
+          <p class="text-lg leading-relaxed mb-4">
+            The vaquita is the rarest marine mammal in the world.
+          </p>
+
+          <div class="animal-info border-t border-orange-200 pt-5">
+
+            <h4 class="text-2xl font-bold mb-3">
+              ⚠️ Biggest Danger
+            </h4>
+
+            <p class="text-lg leading-relaxed mb-4">
+              Illegal fishing nets trap vaquitas underwater.
+            </p>
+
+            <h4 class="text-2xl font-bold mb-3">
+              🦴 What This Animal Does
+            </h4>
+
+            <p class="text-lg leading-relaxed mb-4">
+              Vaquitas are important parts of marine food chains.
+            </p>
+
+            <h4 class="text-2xl font-bold mb-3">
+              🌍 How Humans Can Help
+            </h4>
+
+            <p class="text-lg leading-relaxed mb-5">
+              Conservation groups remove dangerous fishing nets and protect ocean habitats.
+            </p>
+
+            <div class="bg-green-50 rounded-2xl p-5 border border-green-200">
+
+              <h4 class="text-2xl font-bold mb-4 text-green-700">
+                💚 Positive Effects Of Protection
+              </h4>
+
+              <p class="text-lg leading-relaxed mb-4">
+                Protecting vaquitas helps ocean ecosystems stay balanced.
+              </p>
+
+              <ul class="space-y-3 text-lg list-disc pl-6">
+                <li>Cleaner oceans improve marine life health.</li>
+                <li>Protected habitats help animals reproduce safely.</li>
+                <li>Removing pollution lowers injury risks.</li>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center pb-10">
+      <p class="text-xl font-bold">
+        🌍 Protecting nature protects our future.
+      </p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
